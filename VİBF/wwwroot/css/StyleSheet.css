@@ -1,0 +1,145 @@
+﻿/* StyleSheet.css */
+@font-face {
+    font-family: Dax;
+    src: url(../fonts/dax-regular-webfont.woff);
+}
+
+@font-face {
+    font-family: Dax;
+    src: url(../fonts/dax-bold-webfont.woff);
+    font-weight: bold;
+}
+
+* {
+    font-family: Dax
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(../images/header-bg.jpg);
+    background-size: contain;
+    background-repeat: no repeat;
+}
+
+.formContainer {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+table {
+    padding: 7%;
+    background-color: rgb(253,183,0,0.5);
+    border-spacing: 25px;
+    box-sizing: border-box;
+    margin: 0 12.5%;
+}
+
+.footer {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    background-image: url("../images/footer-bg-logo.png");
+    background-size: cover;
+    background-repeat: no repeat;
+    background-color: rgb(49,41,39);
+    display: table;
+}
+
+span {
+    color: rgb(136,126,126);
+}
+
+.columns {
+    height: 100%; 
+    display: inline;
+    width: 30%;
+    float: left;
+    padding: 15px;
+}
+
+.Fspan {
+    color: rgb(1,1,1);
+    font-size: large;
+    font-weight: bold;
+}
+
+.medialinks {
+    float: right;
+    margin-top: 45px;
+    margin-right: 10px;
+}
+
+#faceicon {
+    width: 32px;
+    height: 32px;
+}
+
+#twittericon {
+    width: 32px;
+    height: 32px;
+}
+
+#instagramicon {
+    width: 32px;
+    height: 32px;
+}
+
+#headerLogo {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    max-height: 80px;
+}
+
+#bizeulasin {
+    vertical-align: text-bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fSpan:hover {
+    text-decoration: underline;
+}
+
+#iletisimtel {
+    font-size: large;
+}
+
+#analinkler {
+    display: block;
+    margin-right: 3%;
+    font-size: large;
+}
+
+#copyright {
+    float: right;
+    margin-right: 16px;
+    margin-top: 125px;
+    user-select: none;
+}
+
+.radiospan {
+    font-size: large;
+    font-weight: bold;
+    color: rgb(1,1,1)
+}
+
+#submit {
+    width: 100px;
+    height: 50px;
+    float: right;
+    font-size: large;
+    font-weight: bold;
+}
+
+#cv {
+    font-size: large;
+    font-weight: bold;
+}

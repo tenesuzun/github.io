@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Vakıfbank İş Başvuru Formu</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css">
+    <body>
+        <header>
+            <a href="https://www.vakifbank.com.tr" target="_blank">
+                <img src="~/images/vakiflogo.png" alt="Vakıfbank Logo" id="headerLogo">
+            </a>
+            <div class="medialinks">
+                <a href="https://www.facebook.com/vakifbank/" target="_blank">
+                    <img src="~/images/facebook.png" alt="Facebook icon" id="faceicon" class="socialmedia">
+                </a>
+                <a href="https://twitter.com/VakifBank" target="_blank">
+                    <img src="~/images/twitter.png" alt="twitter icon" id="twittericon" class="socialmedia">
+                </a>
+                <a href="https://www.instagram.com/vakifbank/?hl=tr" target="_blank">
+                    <img src="~/images/instagram.png" alt="instagram icon" id="instagramicon" class="socialmedia">
+                </a>
+            </div>
+        </header>
+        <div class="formContainer">
+            <form asp-controller="Home" asp-action="Save" enctype="multipart/form-data" method="post" id="Bformu">
+                <table>
+                    <tr>
+                        <td><span class="Fspan">Ad:</span></td>
+                        <td><input asp-for="Ad" id="ad" required></td>
+                        <td><span class="Fspan">Soyad:</span></td>
+                        <td><input asp-for="Soyad" id="soyad" required></td>
+                    </tr>
+                    <tr>
+                        <td><span class="Fspan">Email:</span></td>
+                        <td><input asp-for="Email" id="email" required></td>
+                        <td><span class="Fspan">Telefon:</span></td>
+                        <td><input asp-for="Telefon" type="tel" name="telefon" required></td>
+                    </tr>
+                    <tr>
+                        <td><span class="Fspan">Doğum Tarihi:</span></td>
+                        <td><input asp-for="Dgt" id="dgt" required max="@(DateTime.Now)"></td>
+                        <td><span class="Fspan">TCKN:</span></td>
+                        <td><input asp-for="TCKN" type="number" name="tckn" id="tc" maxlength="11" placeholder="11 haneli TC kimlik NO" required></td>
+                    </tr>
+                    <tr>
+                        <td><span class="Fspan">Adres:</span></td>
+                        <td><input asp-for="Adres" id="adres"></td>
+                        <td><span class="Fspan">Sicil Kaydı:</span></td>
+                        <td><input asp-for="Sicil" type="radio" value="Var" name="sicil" id="sicil"><span class="radiospan">Var</span><input asp-for="Sicil" type="radio" name="sicil" value="Yok"><span class="radiospan">Yok</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="Fspan">Medeni Hal:</span></td>
+                        <td><input asp-for="Medeni_hal" type="radio" name="Medeni_hal" value="Bekar" id="medeni"><span class="radiospan">Bekar</span><input asp-for="Medeni_hal" type="radio" name="Medeni_hal" value="Evli"><span class="radiospan">Evli</span></td>
+                        <td><span class="Fspan">Cinsiyet:</span></td>
+                        <td><input asp-for="Cinsiyet" type="radio" name="cinsiyet" id="cins" value="Erkek"><span class="radiospan">Erkek </span><input asp-for="Cinsiyet" type="radio" name="cinsiyet" value="Kadın"><span class="radiospan">Kadın</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="Fspan">Ehliyet:</span></td>
+                        <td><input asp-for="Ehliyet" type="radio" name="Ehliyet" value="Var" id="ehl"><span class="radiospan">Var </span><input asp-for="Ehliyet" type="radio" name="Ehliyet" value="Yok"><span class="radiospan">Yok</span></td>
+                        <td><span class="Fspan">CV'nizi PDF formatında yükleyin:</span></td>
+                        <td><input asp-for="Cv" type="file" id="cv" name="Cv" accept=".pdf"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" name="submit" value="Gönder" id="submit">
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="columns">
+                <a href="https://www.vakifbank.com.tr" target="_blank"><img src="~/images/footer-logo.png" alt="VakıfbankLogo" id="footerLogo"></a><br>
+                <p><img src="~/images/bize-ulasin.png" alt="BizeUlaşın" id="bizeulasin"><span id="iletisimtel">  <b>0850 222 0 724</b></span></p>
+            </div>
+            <div class="columns" id="analinkler">
+                <p><a href="https://www.vakifbank.com.tr/vakifbankli-olmak.aspx?pageID=124"><span class="fSpan">İnsan Kaynakları</span></a></p>
+                <p><a href="https://www.vakifbank.com.tr/hakkimizda.aspx?pageID=182"><span class="fSpan">Hakkımızda</span></a></p>
+                <p><a href="https://www.vakifbank.com.tr/iletisim.aspx?pageID=1039"><span class="fSpan">İletişim</span></a></p>
+            </div>
+            <div class="columns">
+                <a href="https://www.facebook.com/vakifbank/" target="_blank">
+                    <img src="~/images/facebook2.png" alt="Facebook icon" id="faceicon" class="socialmedia">
+                </a>
+                <a href="https://twitter.com/VakifBank" target="_blank">
+                    <img src="~/images/twitter2.png" alt="twitter icon" id="twittericon" class="socialmedia">
+                </a>
+                <a href="https://www.instagram.com/vakifbank/?hl=tr" target="_blank">
+                    <img src="~/images/instagram2.png" alt="instagram icon" id="instagramicon" class="socialmedia">
+                </a>
+                <p id="copyright"><span>&copy; Vakıfbank</span></p>
+            </div>
+        </div>
+    </body>
+</head>
+</html>
